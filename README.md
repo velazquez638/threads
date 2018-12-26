@@ -80,6 +80,7 @@ When we have these procces we create the calls in the main manu:
 
 
 
+
 ![](pictures/Captura.PNG)
 
 
@@ -147,7 +148,12 @@ Finally i have created a cajera class: in this class i show thre threatds distri
 	
 	
 	
-	![](pictures/Captura3.PNG)
+	
+	
+	
+	
+	
+![](pictures/Captura2.PNG)
 
 	
 	
@@ -165,6 +171,10 @@ I have used this code:
 
 to organize int the time the proccess 
 
+
+
+
+![](pictures/Captura3.PNG)
 
 
 
