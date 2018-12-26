@@ -15,7 +15,7 @@ In this code we define the interface:
       public interface Interfaz {
 
 	public abstract void mensaje();
-}
+     }
 
 
 
