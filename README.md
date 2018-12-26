@@ -68,7 +68,7 @@ When we have these procces we create the calls in the main manu:
 		
 		
                 Contenedor contenedor = new Contenedor(titulo); 
-	        contenedor.mensaje(); // the code show us the title
+	        contenedor.mensaje(); // the code show us the cashier procces
 			
 		contenedor = new Contenedor(List);
 	        contenedor.mensaje();  // the code show us the list books option
@@ -86,6 +86,84 @@ When we have these procces we create the calls in the main manu:
 
 
 
+For the firt option i have used threads:
+
+Firstly i have create a Runnable_class. In this class i have create the costumers and cashiers and the time method.
+
+In this class i create the new start threads for the diferents costumers that i have created.
+
+
+                Costumer cliente1 = new Costumer("Juan Pedro", new int[] { 2, 2, 1, 5, 2, 3 });
+		Costumer cliente2 = new Costumer("Manoli", new int[] { 1, 3, 5, 1, 1 });
+		Costumer cliente3 = new Costumer("luis", new int[] { 1, 2, 5, 1, 1, 2, 4});
+
+		
+		Cajera cajera1 = new Cajera("Sara");
+		Cajera cajera2 = new Cajera("Marta");
+		Cajera cajera3 = new Cajera("Manuel");
+		
+		long initialTime = System.currentTimeMillis();
+		
+		Runnable proceso1 = new Runnable_class(cliente1, cajera1, initialTime);
+		Runnable proceso2 = new Runnable_class(cliente2, cajera2, initialTime);
+		Runnable proceso3 = new Runnable_class(cliente3, cajera3, initialTime);
+
+		new Thread(proceso1).start();
+		new Thread(proceso2).start();
+		new Thread(proceso3).start();
+
+
+
+
+Sencondtly i have created Cajera_thread. In this class i have created the procces that the cashier use for the sale.
+
+I have created too a class whith the main thread, in this thread i start the costumer thread and cashier thread.
+
+Finally i have created a cajera class: in this class i show thre threatds distribution:
+
+
+
+                System.out.println("");
+		System.out.println("-caja- nombre del responsable: " + this.nombre + 
+				", procesando la compra del cliente: ");
+		System.out.println(" nombre del cliente: " + cliente.getNombre() + 
+				" tiempo empleado: " + (System.currentTimeMillis() - timeStamp) / 1000	+
+				"seg");
+
+		for (int i = 0; i < cliente.getCarroCompra().length; i++) { 
+				this.esperarXsegundos(cliente.getCarroCompra()[i]); 
+				System.out.println("Procesado el producto " + (i + 1) +  
+				" ->Tiempo: " + (System.currentTimeMillis() - timeStamp) / 1000 + 
+				"seg");
+		}
+
+		System.out.println("");
+		System.out.println("La cajera " + this.nombre + " ha terminado el proceso de venta de " + 
+				cliente.getNombre() + " EN EL TIEMPO: " + 
+				(System.currentTimeMillis() - timeStamp) / 1000 + "seg");
+		System.out.println("");
+
+	}
+	
+	
+	
+	![](pictures/Captura3.PNG)
+
+	
+	
+	
+
+I have used this code:
+
+              private void esperarXsegundos(int segundos) {
+		try {
+			Thread.sleep(segundos * 1000);
+		} catch (InterruptedException ex) {
+			Thread.currentThread().interrupt();
+		}
+	}
+
+to organize int the time the proccess 
 
 
 
