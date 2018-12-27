@@ -33,7 +33,7 @@ public class Cajera {
 		}
 
 		System.out.println("");
-		System.out.println("La cajera " + this.nombre + " ha terminado el proceso de venta " + 
+		System.out.println("La cajera " + this.nombre + " ha terminado el proceso de venta de " + 
 				cliente.getNombre() + " EN EL TIEMPO: " + 
 				(System.currentTimeMillis() - timeStamp) / 1000 + "seg");
 		System.out.println("");

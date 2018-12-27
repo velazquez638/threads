@@ -94,15 +94,43 @@ public class Main {
 				
 			}
 			
-			System.out.println("\t--------------------------------");
-			System.out.println("\tThanks for coming come back soon");
-			System.out.println("\t--------------------------------");
+			
 
 		
 		}
+		
+		System.out.println("\t--------------------------------");
+		System.out.println("\tThanks for coming come back soon");
+		System.out.println("\t--------------------------------");
 		
 	}
 	
 	
 
 }
+
+
+/*
+       
+ 
+ 
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
