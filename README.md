@@ -180,3 +180,32 @@ to organize int the time the proccess
 
  
  
+ 
+ Finally i have created test for Books_dates class:
+ 
+ 
+     class Books_dates_test {
+
+	@Test
+	void test() {
+		
+		Books_dates test = new Books_dates("String_1","String_2","String_3",23);
+		assertEquals(test.getCategorie(),"String_1");
+		assertEquals(test.getName(),"String_2");
+		assertEquals(test.getAuthor(),"String_3");
+		assertEquals(test.getPrice(), 23);
+		
+		
+		
+		fail("Not yet implemented");
+	}
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
