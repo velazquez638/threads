@@ -204,7 +204,6 @@ to organize int the time the proccess
  
  
  In the other hand if we run the Principal_threat class we can see that the cashiers  made the shells at the same tame, this is because 
- 
  the threads run in parallel.
  
  
