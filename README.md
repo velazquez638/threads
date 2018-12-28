@@ -8,6 +8,7 @@ Through the interface i define the void which show the menu lines. When i have d
 the menu options. After that i only need to call the container in the main menu with the parameters that i have created.
 
 
+
 In this code we define the interface:
 
 
@@ -212,7 +213,16 @@ In the other hand if we run the Principal_threat class we can see how the cashie
 
  
  
+ But we can do this in another way, if we run the Runnable_class class the programe do the same oparation but in this case the thread
+ use the Runnable method.
  
+ 
+ # CONCLUSION
+ 
+ In this proyect i have made the same operation whith three diferents options.
+ In the first option which we can run in the main menu the thread procces are executed separately.
+ But if we run individual classes like Principal_threat we can see the same procces but in this case we can see that the thread is   executed in parallel.
+ We can see the same if we run the Runnable_class but in thise case we implement the Runnable class.
  
  
  
